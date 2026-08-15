@@ -1,6 +1,6 @@
 {
   "name": "@pontx/stripe-identity",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packageManager": "pnpm@10.22.0",
   "description": "Type-safe Stripe Identity API SDK and privacy-first CLI generated from Stripe's official OpenAPI contract",
   "main": "./dist/index.js",

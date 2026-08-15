@@ -10,8 +10,8 @@ Endpoints across verification sessions and verification reports.
 
 ## Privacy and safety
 
-- Calls go directly from your local SDK/CLI process to `api.stripe.com`.
-- Pontx Hub never proxies, caches, logs, or stores Stripe Identity traffic.
+- Calls from the local SDK/CLI process go directly to `api.stripe.com`.
+- The web Playground relays one request only after an explicit caller action, uses only the current session's credential, and does not cache, log, or persist Stripe Identity traffic.
 - `STRIPE_SECRET_KEY` remains in your process environment and is redacted from
   CLI previews.
 - Creating, updating, canceling, and redacting sessions is preview-first and

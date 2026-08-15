@@ -57,9 +57,10 @@ const credentialPattern = /sk_(?:test|live|restricted)_[A-Za-z0-9]+|authorizatio
 for (const { pathname, method, operation } of operations) {
   const label = `${method.toUpperCase()} ${pathname}`;
   assert.equal(operation["x-pontx-documentation-status"], "official", `${label}: evidence drifted`);
-  assert.equal(operation["x-pontx-proxy-enabled"], false, `${label}: Hub proxy must stay disabled`);
-  assert(operation["x-pontx-proxy-disabled-reason"]?.includes("highly sensitive personal data"),
-    `${label}: missing privacy boundary`);
+  assert.equal(Object.hasOwn(operation, "x-pontx-proxy-enabled"), false,
+    `${label}: must not carry a policy-based execution disablement`);
+  assert.equal(Object.hasOwn(operation, "x-pontx-proxy-disabled-reason"), false,
+    `${label}: must not carry a policy-based execution disablement reason`);
   assert(operation["x-pontx-evidence"]?.every((url) => url.startsWith("https://")),
     `${label}: evidence must use HTTPS`);
   const example = operation["x-pontx-request-examples"]?.default;
@@ -101,8 +102,8 @@ assert.equal(provenance.source.revision, "325f3b157f7250f2a5d228b870d77bb63fc7e5
 assert.equal(provenance.output.operations, 8);
 assert.equal(provenance.output.schemas, 35);
 assert.equal(provenance.output.untaggedOperations, 8);
-assert.equal(provenance.output.proxyDisabledOperations, 8);
+assert.equal(provenance.output.executionEligibleOperations, 8);
 assert.equal(provenance.output.formUrlencodedOperations, 4);
 assert.equal(provenance.output.mutationOperations, 4);
 
-console.log(`Verified Stripe Identity contract ${actualHash}: 6 paths, 8 flat Endpoints, 35 Schemas, 4 mutations, zero Hub proxy operations.`);
+console.log(`Verified Stripe Identity contract ${actualHash}: 6 paths, 8 flat Endpoints, 35 Schemas, 4 mutations, and no policy-based execution disablements.`);
