@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Stripe Identity API",
-    "description": "Create, retrieve, update, cancel, and redact Stripe Identity verification sessions, and retrieve verification reports. Requests are sent directly to Stripe by the local SDK/CLI; Pontx Hub does not proxy or store identity data.",
+    "description": "Create, retrieve, update, cancel, and redact Stripe Identity verification sessions, and retrieve verification reports. Web debugging relays one request only after an explicit caller action; Pontx Hub does not cache, log, or persist identity data.",
     "version": "2026-07-29.dahlia",
     "termsOfService": "https://stripe.com/us/terms/",
     "contact": {
@@ -224,8 +224,6 @@
           "https://github.com/stripe/openapi/blob/325f3b157f7250f2a5d228b870d77bb63fc7e54c/LICENSE"
         ],
         "x-pontx-verified-at": "2026-08-15",
-        "x-pontx-proxy-enabled": false,
-        "x-pontx-proxy-disabled-reason": "Contains highly sensitive personal data including identity documents, selfies, ID numbers, email addresses, phone numbers, and verification results. Hub proxying is disabled; call only from a controlled local environment with your own Stripe key.",
         "x-pontx-request-examples": {
           "default": {
             "summary": "Reviewed local SDK/CLI request",
@@ -304,8 +302,6 @@
           "https://github.com/stripe/openapi/blob/325f3b157f7250f2a5d228b870d77bb63fc7e54c/LICENSE"
         ],
         "x-pontx-verified-at": "2026-08-15",
-        "x-pontx-proxy-enabled": false,
-        "x-pontx-proxy-disabled-reason": "Contains highly sensitive personal data including identity documents, selfies, ID numbers, email addresses, phone numbers, and verification results. Hub proxying is disabled; call only from a controlled local environment with your own Stripe key.",
         "x-pontx-request-examples": {
           "default": {
             "summary": "Reviewed local SDK/CLI request",
@@ -531,8 +527,6 @@
           "https://github.com/stripe/openapi/blob/325f3b157f7250f2a5d228b870d77bb63fc7e54c/LICENSE"
         ],
         "x-pontx-verified-at": "2026-08-15",
-        "x-pontx-proxy-enabled": false,
-        "x-pontx-proxy-disabled-reason": "Contains highly sensitive personal data including identity documents, selfies, ID numbers, email addresses, phone numbers, and verification results. Hub proxying is disabled; call only from a controlled local environment with your own Stripe key.",
         "x-pontx-request-examples": {
           "default": {
             "summary": "Reviewed local SDK/CLI request",
@@ -724,8 +718,6 @@
           "https://github.com/stripe/openapi/blob/325f3b157f7250f2a5d228b870d77bb63fc7e54c/LICENSE"
         ],
         "x-pontx-verified-at": "2026-08-15",
-        "x-pontx-proxy-enabled": false,
-        "x-pontx-proxy-disabled-reason": "Contains highly sensitive personal data including identity documents, selfies, ID numbers, email addresses, phone numbers, and verification results. Hub proxying is disabled; call only from a controlled local environment with your own Stripe key.",
         "x-pontx-request-examples": {
           "default": {
             "summary": "Reviewed local SDK/CLI request",
@@ -805,8 +797,6 @@
           "https://github.com/stripe/openapi/blob/325f3b157f7250f2a5d228b870d77bb63fc7e54c/LICENSE"
         ],
         "x-pontx-verified-at": "2026-08-15",
-        "x-pontx-proxy-enabled": false,
-        "x-pontx-proxy-disabled-reason": "Contains highly sensitive personal data including identity documents, selfies, ID numbers, email addresses, phone numbers, and verification results. Hub proxying is disabled; call only from a controlled local environment with your own Stripe key.",
         "x-pontx-request-examples": {
           "default": {
             "summary": "Reviewed local SDK/CLI request",
@@ -987,8 +977,6 @@
           "https://github.com/stripe/openapi/blob/325f3b157f7250f2a5d228b870d77bb63fc7e54c/LICENSE"
         ],
         "x-pontx-verified-at": "2026-08-15",
-        "x-pontx-proxy-enabled": false,
-        "x-pontx-proxy-disabled-reason": "Contains highly sensitive personal data including identity documents, selfies, ID numbers, email addresses, phone numbers, and verification results. Hub proxying is disabled; call only from a controlled local environment with your own Stripe key.",
         "x-pontx-request-examples": {
           "default": {
             "summary": "Reviewed local SDK/CLI request",
@@ -1090,8 +1078,6 @@
           "https://github.com/stripe/openapi/blob/325f3b157f7250f2a5d228b870d77bb63fc7e54c/LICENSE"
         ],
         "x-pontx-verified-at": "2026-08-15",
-        "x-pontx-proxy-enabled": false,
-        "x-pontx-proxy-disabled-reason": "Contains highly sensitive personal data including identity documents, selfies, ID numbers, email addresses, phone numbers, and verification results. Hub proxying is disabled; call only from a controlled local environment with your own Stripe key.",
         "x-pontx-request-examples": {
           "default": {
             "summary": "Reviewed local SDK/CLI request",
@@ -1191,8 +1177,6 @@
           "https://github.com/stripe/openapi/blob/325f3b157f7250f2a5d228b870d77bb63fc7e54c/LICENSE"
         ],
         "x-pontx-verified-at": "2026-08-15",
-        "x-pontx-proxy-enabled": false,
-        "x-pontx-proxy-disabled-reason": "Contains highly sensitive personal data including identity documents, selfies, ID numbers, email addresses, phone numbers, and verification results. Hub proxying is disabled; call only from a controlled local environment with your own Stripe key.",
         "x-pontx-request-examples": {
           "default": {
             "summary": "Reviewed local SDK/CLI request",

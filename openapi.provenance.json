@@ -9,13 +9,13 @@
     "licenseSha256": "8c1ce883f4eee7b531e0b7872dbfc72d410ced87dfff9501305de05ca8d203e5"
   },
   "output": {
-    "sha256": "2795c829cd0b411850a0828474fc6240b5fe1fec088b0cae816aaf267a3b8c52",
+    "sha256": "116f217919de1a92f65a1ec71abd85852a8c8dd14ea625d04207288577d1c06b",
     "paths": 6,
     "operations": 8,
     "schemas": 35,
     "untaggedOperations": 8,
-    "proxyDisabledOperations": 8,
     "formUrlencodedOperations": 4,
-    "mutationOperations": 4
+    "mutationOperations": 4,
+    "executionEligibleOperations": 8
   }
 }
