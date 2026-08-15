@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "source": {
+    "repository": "https://github.com/stripe/openapi",
+    "revision": "325f3b157f7250f2a5d228b870d77bb63fc7e54c",
+    "file": "openapi/spec3.json",
+    "sha256": "3653ad45bbec54fcbe461c541c908355b715018bdf455a0e11b27bedb2cbdee5",
+    "license": "MIT",
+    "licenseSha256": "8c1ce883f4eee7b531e0b7872dbfc72d410ced87dfff9501305de05ca8d203e5"
+  },
+  "output": {
+    "sha256": "35ff6eada69c16f670b9d5efa8f246a08064f2a17ec23f47ebcfd00805ca5c39",
+    "paths": 6,
+    "operations": 8,
+    "schemas": 34,
+    "untaggedOperations": 8,
+    "proxyDisabledOperations": 8,
+    "formUrlencodedOperations": 4,
+    "mutationOperations": 4
+  }
+}
