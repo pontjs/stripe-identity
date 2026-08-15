@@ -209,14 +209,7 @@ export type APIs = {
        * @description The ID of the Account representing a customer.
        */
       related_customer_account?: string;
-      /**
-       * @title related_person_param
-       * @description Tokens referencing a Person resource and its associated account.
-       */
-      related_person: {
-        account: string;
-        person: string
-      };
+      related_person?: schemas.stripe_identity_related_person_param;
       /**
        * @description The URL that the user will be redirected to upon completing the verification flow.
        */

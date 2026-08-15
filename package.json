@@ -1,6 +1,6 @@
 {
   "name": "@pontx/stripe-identity",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@10.22.0",
   "description": "Type-safe Stripe Identity API SDK and privacy-first CLI generated from Stripe's official OpenAPI contract",
   "main": "./dist/index.js",
@@ -28,7 +28,8 @@
     "type-check": "tsc --noEmit",
     "test:unit": "node scripts/run-unit-tests.mjs",
     "test:e2e": "node --test test/e2e/*.test.mjs",
-    "quality": "pnpm contract:verify && pnpm generate:check && pnpm type-check && pnpm test:unit && pnpm build && pnpm test:e2e",
+    "test:types": "tsc --project test/types/tsconfig.json",
+    "quality": "pnpm contract:verify && pnpm generate:check && pnpm type-check && pnpm test:unit && pnpm build && pnpm test:types && pnpm test:e2e",
     "prepublishOnly": "pnpm release:verify"
   },
   "keywords": [

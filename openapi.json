@@ -665,23 +665,7 @@
                     "type": "string"
                   },
                   "related_person": {
-                    "description": "Tokens referencing a Person resource and its associated account.",
-                    "properties": {
-                      "account": {
-                        "maxLength": 5000,
-                        "type": "string"
-                      },
-                      "person": {
-                        "maxLength": 5000,
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "account",
-                      "person"
-                    ],
-                    "title": "related_person_param",
-                    "type": "object"
+                    "$ref": "#/components/schemas/stripe_identity_related_person_param"
                   },
                   "return_url": {
                     "description": "The URL that the user will be redirected to upon completing the verification flow.",
@@ -2464,6 +2448,25 @@
           "verified_outputs"
         ],
         "x-resourceId": "identity.verification_session"
+      },
+      "stripe_identity_related_person_param": {
+        "description": "Tokens referencing a Person resource and its associated account.",
+        "properties": {
+          "account": {
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "person": {
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "account",
+          "person"
+        ],
+        "title": "related_person_param",
+        "type": "object"
       },
       "stripe_error": {
         "type": "object",

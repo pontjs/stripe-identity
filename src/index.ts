@@ -12,7 +12,9 @@ export type StripeIdentityClientConfig = StripeIdentityCredentials & {
   fetch?: typeof fetch;
 };
 
-export function createStripeIdentityClient(config: StripeIdentityClientConfig) {
+export type StripeIdentityClient = APIs;
+
+export function createStripeIdentityClient(config: StripeIdentityClientConfig): StripeIdentityClient {
   const authorization = resolveStripeIdentityAuthorization(config);
   return createGracefulClient<APIs>({
     pontxSpecMeta: specMeta as never,
@@ -23,7 +25,7 @@ export function createStripeIdentityClient(config: StripeIdentityClientConfig) {
       headers.set("Authorization", authorization);
       return { url, init: { ...init, headers } };
     },
-  });
+  }) as unknown as StripeIdentityClient;
 }
 
 export { StripeIdentityHttpError } from "./transport";

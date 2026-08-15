@@ -717,6 +717,15 @@ export type stripe_identity_verification_session = {
 }
 
 /**
+ * @title related_person_param
+ * @description Tokens referencing a Person resource and its associated account.
+ */
+export type stripe_identity_related_person_param = {
+  account: string;
+  person: string;
+}
+
+/**
  * @description An error response from the Stripe API.
  */
 export type stripe_error = {
