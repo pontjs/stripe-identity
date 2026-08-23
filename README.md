@@ -1,5 +1,7 @@
 # @pontx/stripe-identity
 
+[Pontx Hub SDK guide](https://pontx.dev/en/sdks/stripe-identity)
+
 Type-safe Stripe Identity SDK and privacy-first CLI generated from the complete
 Stripe Identity path boundary in Stripe's official OpenAPI contract.
 
